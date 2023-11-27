@@ -154,7 +154,8 @@ class MagellanLDSS3Spectrograph(spectrograph.Spectrograph):
         par['calibrations']['wavelengths']['rms_threshold'] = 0.5
         par['calibrations']['wavelengths']['sigdetect'] = 5
         par['calibrations']['wavelengths']['lamps'] = ['ArI','NeI','HeI']
-        par['calibrations']['wavelengths']['method'] = 'holy-grail' # if things fail with this, try reidentify (but note that archived wavelength solution is required)
+        par['calibrations']['wavelengths']['reid_arxiv'] = 'wvarxiv_magellan_ldss3_20231122T0943.fits' 
+        par['calibrations']['wavelengths']['method'] = 'full_template' # 'holy-grail' # if things fail with this, try reidentify (but note that archived wavelength solution is required)
 
         # Set slits and tilts parameters
         par['calibrations']['tilts']['tracethresh'] = 20. # default value
